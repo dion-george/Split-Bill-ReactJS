@@ -3,11 +3,12 @@ import './App.css';
 import {Container, Row, Col} from 'react-amazing-grid';
 import Centered from './Centered';
 import Comment from './Comment';
+import MessageList from './messages/message-list';
 
 class App extends Component {
     render() {
     return (
-      <div className="App">
+      <div className="containerList">
 
       <Container>
         <Row>
@@ -24,8 +25,9 @@ class App extends Component {
         
         <Row>
         <Col xs={8} xsoffset={1}>
-        <Comment> Dion1 </Comment>
-        <Comment> Dion2 </Comment>
+          <div className="ListDiv">
+              <MessageList />
+          </div>
         </Col>
         <Col xs={3} xsoffset={4}>
         <div className = "members">
@@ -39,9 +41,7 @@ class App extends Component {
         </Col>
         </Row>
         </Container>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
+        
       </div>
     );
   }

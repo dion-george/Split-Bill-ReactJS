@@ -6,6 +6,7 @@
     "prop-types": "^15.6.1",
     "react": "^16.4.0",
     "react-amazing-grid": "^1.1.0",
+    "react-bootstrap-navbar": "^1.1.0",
     "react-column-layout": "^1.0.7",
     "react-columns": "^1.2.0",
     "react-dom": "^16.4.0",

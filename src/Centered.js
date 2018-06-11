@@ -49,7 +49,6 @@ export default class Centered extends React.Component {
     const { open } = this.state;
     return (
       <div className="example">
-        <h4>Custom styling</h4>
         <button className="btn btn-action" onClick={this.onOpenModal}>
           Add
         </button>{' '}
@@ -61,7 +60,8 @@ export default class Centered extends React.Component {
           classNames={{ overlay: 'custom-overlay', modal: 'custom-modal' }}
         >
 
-        <Form className="sizeModal">
+        <h2>Add a bill </h2>
+        <Form>
            <Container>
              <Row>
              <label htmlFor="amount">Title</label>
@@ -73,14 +73,18 @@ export default class Centered extends React.Component {
         <label> 
         <Checkbox />text
         </label>
-      <Text field="firstName" id="text-input-disabled-firstName" enabled />
-
+      <Text field="firstName" id="text-input-disabled-firstName" disabled />
         </Row>
-        </Container>    
+        <Row>
         <label htmlFor="status">Paid by</label>
         <Select field="status" id="status" options={statusOptions}  />
-        
-
+        </Row>
+        <Row>
+        <button type="submit">
+          Submit
+        </button>        
+        </Row>
+        </Container>
           </Form>
 
 

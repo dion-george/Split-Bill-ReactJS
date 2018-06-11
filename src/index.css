@@ -7,3 +7,20 @@ body {
 .inputStyle{
 	width: 10%
 }
+
+.containerList{
+	color:#282828;
+}
+
+.ListDiv{
+	padding: 10px;
+    box-shadow: 0px 0px 18px #888888;
+}
+
+.members {
+    border-radius: 15px 50px;
+    background: #000000;
+    padding: 20px; 
+    width: 200px;
+    height: 100%; 
+} 
