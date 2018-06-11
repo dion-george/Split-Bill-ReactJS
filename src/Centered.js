@@ -8,6 +8,16 @@ import {Container, Row, Col} from 'react-amazing-grid';
 
 export default class Centered extends React.Component {
   
+  constructor(props) {
+    super(props);
+     }
+
+submitForm = () => {
+  var val = this.refs.newText.value;
+  console.log('New Word: '+val)
+  }
+
+
  state = {
     open: false,
   };
@@ -49,9 +59,9 @@ export default class Centered extends React.Component {
     const { open } = this.state;
     return (
       <div className="example">
-        <button className="btn btn-action" onClick={this.onOpenModal}>
+        <button onClick={this.onOpenModal}>
           Add
-        </button>{' '}
+        </button>
         
         <Modal
           open={open}
@@ -65,30 +75,49 @@ export default class Centered extends React.Component {
            <Container>
              <Row>
              <label htmlFor="amount">Title</label>
-              <Text field="firstName" />
+              <Text ref="newText" field="firstName" />
               <label htmlFor="amount">Amount</label>
               <Text field="firstName" className="inputStyle"  />
             </Row>
           <Row>
-        <label> 
-        <Checkbox />text
+         <label>
+          Me
+          <input
+            name="isGoing"
+            type="checkbox"
+ 
+             />
         </label>
-      <Text field="firstName" id="text-input-disabled-firstName" disabled />
+
+      <Text field ="friendName1" className="inputStyle" enabled />
+        </Row>
+        <Row>
+        <label> 
+        <Checkbox />Welisa
+        </label>
+      <Text field ="friendName2" className="inputStyle" enabled />
+        </Row>
+        <Row>
+        <label> 
+        <Checkbox />Rohan
+        </label>
+      <Text field ="friendName" className="inputStyle" enabled />
+        </Row>
+        <Row>
+        <label> 
+        <Checkbox />Varun
+        </label>
+      <Text field ="friendName" className="inputStyle" enabled />
         </Row>
         <Row>
         <label htmlFor="status">Paid by</label>
         <Select field="status" id="status" options={statusOptions}  />
         </Row>
         <Row>
-        <button type="submit">
-          Submit
-        </button>        
+        <button onClick={this.submitForm}> Submit </button>        
         </Row>
         </Container>
           </Form>
-
-
-
 
         </Modal>
       </div>

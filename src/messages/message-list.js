@@ -7,20 +7,25 @@ class MessageList extends Component {
   state = {
     messages:  [
       {
-        from: 'John',
-        message: 'The event will start next week',
-        status: 'unread'
+        billName: 'Dinner at the Restaurant',
+        amount: '20',
+        paidBy: 'someone',
+        f1: '21',
+        f2: '22',
+        f3: '33',
+        f4: '23',
+
       },
       {
-        from: 'Martha',
-        message: 'I will be travelling soon',
-        status: 'read'
+        billName: 'Dinner at the Restaurant',
+        amount: '20',
+        paidBy: 'someone',
+        f1: '21',
+        f2: '22',
+        f3: '33',
+        f4: '23',
+
       },
-      {
-        from: 'Jacob',
-        message: 'Talk later. Have a great day!',
-        status: 'read'
-      }
     ]
   }
 
@@ -32,7 +37,6 @@ class MessageList extends Component {
     })
     return(
       <div>
-        <h3>Active Bills</h3>
         {messages}
       </div>
     )

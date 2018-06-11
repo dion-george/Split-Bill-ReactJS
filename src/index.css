@@ -1,26 +1,93 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: sans-serif;
+  font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif	;
 }
 
 .inputStyle{
 	width: 10%
 }
 
+.bodyLayout{
+	color:#282828;
+		padding: 10px;
+    box-shadow: 0px 0px 18px #888888;
+    margin: 10px;
+}
+
 .containerList{
 	color:#282828;
+		padding: 10px;
+    box-shadow: 0px 0px 18px #888888;
+    margin: 10px;
 }
 
 .ListDiv{
 	padding: 10px;
+	padding-left: 20px;	
     box-shadow: 0px 0px 18px #888888;
 }
 
+
 .members {
-    border-radius: 15px 50px;
-    background: #000000;
-    padding: 20px; 
-    width: 200px;
-    height: 100%; 
-} 
+
+    box-shadow: 0px 0px 18px #888888;
+       padding: 20px; 
+
+}
+
+.horizontalLine{
+	height: 1px;
+	background-color: #888888; 
+}
+
+.mainTable th:hover {background-color: #383838;}
+
+.mainTable{
+	margin-top:8px;
+	margin-bottom: 8px;
+	width: 100%;
+}
+
+
+.mainTable th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: center;
+    background-color: #303030;
+    color: white;
+}
+
+.memberTable{
+	border-collapse: collapse;
+    width: 100%;
+    margin-bottom: 8px;
+}
+
+.memberTable td, .memberTable th {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+}
+
+.mainBody{
+	margin-top: 10px;
+}
+
+.membersSidebar{
+	border-collapse: collapse;
+    width: 100%;
+}
+
+.membersSidebar td, .membersSidebar th {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+.membersSidebar tr:nth-child(even){background-color: #f2f2f2;}
+
+.membersSidebar tr:hover {background-color: #ddd;}
+
+.name{
+	text-align: center;
+}
