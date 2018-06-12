@@ -1,21 +1,34 @@
 import React, { Component } from 'react';
-import './App.css';
+import { AwesomeButton } from 'react-awesome-button';
 import {Container, Row, Col} from 'react-amazing-grid';
 import Centered from './Centered';
 import Comment from './Comment';
 import MessageList from './messages/message-list';
 
+
 class App extends Component {
     render() {
     return (
       <div className = "mainBody">
+<div className="navBar">
+  
+<ul>
+  <li className="navli"><a href="#home">Home</a></li>
+  <li className="navli"><a href="#news">News</a></li>
+  <li  className="navli" ><a href="#contact">Contact</a></li>
+  <li className="rightNav"><a href="#about">About</a></li>
+  <li className="rightNav"><a href="#Next">Next</a></li>
+</ul>
 
+</div>
       <Container>
         <Row>
         <Col xs={1} xsoffset={1}>
         </Col>
         <Col xs={7} xsoffset={1}>
           <div className="ListDiv">
+              <h3> Testing </h3>
+
               <MessageList />
           </div>
         </Col>

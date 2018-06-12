@@ -2,22 +2,26 @@ import React from 'react';
 import Modal from 'react-responsive-modal';
 import './custom-animation.css';
 import './index.css';
-import { Form, Text, Select, Checkbox} from 'react-form';
-import {Container, Row, Col} from 'react-amazing-grid';
 
+import {Container, Row, Col} from 'react-amazing-grid';
+import Form from "./Form";
 
 export default class Centered extends React.Component {
-  
-  constructor(props) {
-    super(props);
-     }
+ 
+   state = {    
+    fields: {}
+  };
 
-submitForm = () => {
-  var val = this.refs.newText.value;
-  console.log('New Word: '+val)
-  }
-
-
+  onChange = updatedValue => {
+    this.setState({
+      fields: {
+        ...this.state.fields,
+        ...updatedValue
+      }
+    });
+  };
+ 
+ 
  state = {
     open: false,
   };
@@ -59,8 +63,8 @@ submitForm = () => {
     const { open } = this.state;
     return (
       <div className="example">
-        <button onClick={this.onOpenModal}>
-          Add
+        <button className="addBillBtn" onClick={this.onOpenModal}>
+          <span>Add Bill</span>
         </button>
         
         <Modal
@@ -69,55 +73,12 @@ submitForm = () => {
           center
           classNames={{ overlay: 'custom-overlay', modal: 'custom-modal' }}
         >
-
-        <h2>Add a bill </h2>
-        <Form>
-           <Container>
-             <Row>
-             <label htmlFor="amount">Title</label>
-              <Text ref="newText" field="firstName" />
-              <label htmlFor="amount">Amount</label>
-              <Text field="firstName" className="inputStyle"  />
-            </Row>
-          <Row>
-         <label>
-          Me
-          <input
-            name="isGoing"
-            type="checkbox"
- 
-             />
-        </label>
-
-      <Text field ="friendName1" className="inputStyle" enabled />
-        </Row>
-        <Row>
-        <label> 
-        <Checkbox />Welisa
-        </label>
-      <Text field ="friendName2" className="inputStyle" enabled />
-        </Row>
-        <Row>
-        <label> 
-        <Checkbox />Rohan
-        </label>
-      <Text field ="friendName" className="inputStyle" enabled />
-        </Row>
-        <Row>
-        <label> 
-        <Checkbox />Varun
-        </label>
-      <Text field ="friendName" className="inputStyle" enabled />
-        </Row>
-        <Row>
-        <label htmlFor="status">Paid by</label>
-        <Select field="status" id="status" options={statusOptions}  />
-        </Row>
-        <Row>
-        <button onClick={this.submitForm}> Submit </button>        
-        </Row>
-        </Container>
-          </Form>
+<div>
+<Form onChange={fields => this.onChange(fields)} />
+        <p>
+          {JSON.stringify(this.state.fields, null, 2)}
+        </p>
+</div>
 
         </Modal>
       </div>

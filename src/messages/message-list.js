@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 import MessageView from './message-view';
 
-class MessageList extends Component {
+export default class MessageList extends Component {
 
   state = {
     messages:  [
@@ -43,4 +43,4 @@ class MessageList extends Component {
   }
 }
 
-export default MessageList;
+ MessageList;
