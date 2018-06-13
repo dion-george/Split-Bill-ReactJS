@@ -1,7 +1,10 @@
 import React from "react";
+import Trial from "./trial";
+import MessageView from './message-view';
 
 export default class Form extends React.Component {
   state = {
+    
     billName: "",
     amount: "",
   }
@@ -20,8 +23,6 @@ export default class Form extends React.Component {
 
     this.setState({
       
-      billName: "",
-      amount: "",
     });
     this.props.onChange({
       billName: "",
@@ -31,6 +32,7 @@ export default class Form extends React.Component {
 
   render() {
     return (
+      <div>
       <form>  
         <input
           name="billName"
@@ -48,7 +50,10 @@ export default class Form extends React.Component {
         />
         <br />
         <button onClick={e => this.onSubmit(e)}>Submit</button>
-      </form>
+        </form>
+        <Trial name={this.state.billName} />
+        
+      </div>
     );
   }
 }

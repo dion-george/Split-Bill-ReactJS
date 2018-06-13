@@ -16,7 +16,6 @@ export default class Centered extends React.Component {
     this.setState({
       fields: {
         ...this.state.fields,
-        ...updatedValue
       }
     });
   };
@@ -37,29 +36,6 @@ export default class Centered extends React.Component {
   render() {
 
 
-
- const statusOptions = [
-    {
-      label: 'Me',
-      value: 'Me',
-    },
-    {
-      label: 'Friend1',
-      value: 'Friend1',
-    },
-    {
-      label: 'Friend2',
-      value: 'Friend2',
-    },
-    {
-      label: 'Friend3',
-      value: 'Friend3',
-    },
-  ]
-
-
-
-
     const { open } = this.state;
     return (
       <div className="example">
@@ -75,12 +51,11 @@ export default class Centered extends React.Component {
         >
 <div>
 <Form onChange={fields => this.onChange(fields)} />
-        <p>
-          {JSON.stringify(this.state.fields, null, 2)}
-        </p>
+
 </div>
 
         </Modal>
+
       </div>
     );
   }

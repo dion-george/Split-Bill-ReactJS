@@ -1,25 +1,27 @@
 import React from 'react';
 
-
 export default class Comment extends React.Component {
-  
+
    constructor(props) {
     super(props);
-    this.state = { editing: false };
+    this.state = { editing: true };
      }
 
+
 edit = () => {
-    this.setState({editing:true});
+this.setState({editing:true});
    }
-remove() {
-    alert('remove comment');
+remove = () => {
+this.props.deleteFromBoard(this.props.index)
  }
 
- save() {
-  var val = this.refs.newText.value;
+ save = () => {
+ 	  this.props.updateCommentText(this.refs.newText.value,this.props.index);
+ 	  
     this.setState({editing:false});
  }
-  
+
+
   renderNormal(){
     return(
       <div>
@@ -33,18 +35,19 @@ remove() {
   renderForm(){
     return(
         <div>
-          <textarea ref="newText" defaultValue={this.props.children}></textarea>
+          <input ref="newText" defaultValue={this.props.children}></input>
           <button onClick={this.save}> Save </button>
         </div>
       );
   }
-  render() {
+
+
+ render (){
     if (this.state.editing) {
       return this.renderForm();
     }else{
       return this.renderNormal();
-    }
-  }
+    } 	
+ }
 }
-
-
+  

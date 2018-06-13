@@ -3,7 +3,8 @@ import { AwesomeButton } from 'react-awesome-button';
 import {Container, Row, Col} from 'react-amazing-grid';
 import Centered from './Centered';
 import Comment from './Comment';
-import MessageList from './messages/message-list';
+import Board from './Board';
+import MessageList from './message-list';
 
 
 class App extends Component {
@@ -29,7 +30,7 @@ class App extends Component {
           <div className="ListDiv">
               <h3> Testing </h3>
 
-              <MessageList />
+              <Board />
           </div>
         </Col>
         <Col xs={3} xsoffset={4}>

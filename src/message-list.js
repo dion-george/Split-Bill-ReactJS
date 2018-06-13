@@ -8,28 +8,15 @@ export default class MessageList extends Component {
     messages:  [
       {
         billName: 'Dinner at the Restaurant',
-        amount: '20',
-        paidBy: 'someone',
-        f1: '21',
-        f2: '22',
-        f3: '33',
-        f4: '23',
-
       },
       {
-        billName: 'Dinner at the Restaurant',
-        amount: '20',
-        paidBy: 'someone',
-        f1: '21',
-        f2: '22',
-        f3: '33',
-        f4: '23',
+        billName: this.val,
 
       },
     ]
   }
-
   render() {
+    
     const messages  = this.state.messages.map(function(message, index) {
       return(
         <MessageView key={index} message={message} />
