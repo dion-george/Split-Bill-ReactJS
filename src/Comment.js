@@ -211,63 +211,54 @@ console.log(splitMoney);
 
         <Container>
         <Row>
-        <Col xs={3} xsoffset={1}>
-        </Col>
+
         <Col>
-        <span>Bill Name: </span>
+
           <input ref="newText" placeholder={'Enter Bill Name'} className="billStyle"></input>
         </Col>
         </Row>
         <Row>
-         <Col xs={2} xsoffset={1}>
-        </Col>
+         
          <Col>
          <span>Paid by: </span>
           <input ref="newText2" placeholder={'Person paid'} className="paidStyle"></input>
         </Col>
          
         <Col>
-          <span>Amount:</span>
-          <input ref="newText3" placeholder={'In Rs.'} className="amtStyle"></input>
+          <span>Amount: </span>
+          <input ref="newText3" placeholder={'Rs.'} className="amtStyle"></input>
           </Col>
           </Row>
-          <Row>
-        <span>Split the bill with: </span>
-        <label>
-        
-        <input type="checkbox"
-          checked={this.state.isChecked1}
-          onChange={this.toggleChange1}
-        />
-        Me
-       </label>
 
-      <label>
-        
-        <input type="checkbox"
-          checked={this.state.isChecked2}
-          onChange={this.toggleChange2}
-        />
-        Welisa
-       </label>
 
-        <label>
-        
-        <input type="checkbox"
-          checked={this.state.isChecked3}
-          onChange={this.toggleChange3}
-        />
-        Rohan
-       </label>
 
-       <label>
-        
-        <input type="checkbox"
-          checked={this.state.isChecked4}
-          onChange={this.toggleChange4}
-        />
-        Varun
-       </label>
+        <Row>
+        <span className="splitWith">Split with: </span>
+
+<label className="container">
+  <input type="checkbox" 
+  checked={this.state.isChecked1}
+    onChange={this.toggleChange1}/>Me
+  <span className="checkmark"></span>
+</label>
+<label className="container">
+  <input type="checkbox"
+  checked={this.state.isChecked2}
+    onChange={this.toggleChange2}/>Welisa
+  <span className="checkmark"></span>
+</label>
+<label className="container">Rohan
+  <input type="checkbox"
+  checked={this.state.isChecked3}
+    onChange={this.toggleChange3}/>
+  <span className="checkmark"></span>
+</label>
+<label className="container">Varun
+  <input type="checkbox"
+  checked={this.state.isChecked4}
+  onChange={this.toggleChange4}/>
+  <span className="checkmark"></span>
+</label>
         </Row>
           </Container>
 
