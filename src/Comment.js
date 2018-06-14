@@ -198,8 +198,12 @@ console.log(splitMoney);
       </div>
         <h3> {this.props.sum} </h3>
         <div>
-        <button onClick={this.remove} className="saveRemove"> Remove </button>
+        <button onClick={this.remove} className="saveRemove"> Completed </button>
         </div>
+        <div className="horizontalRemove">
+      </div>
+
+
       </div>  
        );
   }
@@ -214,7 +218,7 @@ console.log(splitMoney);
 
         <Col>
 
-          <input ref="newText" placeholder={'Enter Bill Name'} className="billStyle"></input>
+          <input ref="newText" placeholder={'Enter Bill Name'} className="billStyle" required></input>
         </Col>
         </Row>
         <Row>

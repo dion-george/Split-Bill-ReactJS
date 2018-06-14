@@ -154,18 +154,15 @@ render() {
        <button onClick={this.add.bind()} className="addBillBtn"><span>Add Bill</span></button>   
         </Row>
         
-        <Row>
-      <div className="horizontalLine">
-      </div>
-        </Row>
+
 
        <Row>
         
 
           <table className="mainTable">
         <tr>
-        <th>Amount: {this.state.toGet}</th>
-        <th>Paid by:{this.state.toGive}</th>
+        <th>Amount to Receive: {this.state.toGet}</th>
+        <th>Amount to Pay: {this.state.toGive}</th>
     
         </tr>
         </table>

@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import { AwesomeButton } from 'react-awesome-button';
 import {Container, Row, Col} from 'react-amazing-grid';
 import Centered from './Centered';
-import Userbalance from './Userbalance';
 import Board from './Board';
 import MessageList from './message-list';
 

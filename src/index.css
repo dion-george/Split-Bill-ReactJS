@@ -76,6 +76,13 @@ float:right;
 	background-color: #888888; 
 }
 
+.horizontalRemove{
+  height: 1px;
+  background-color: #888888; 
+  margin-bottom: 1%;
+}
+
+
 .mainTable th:hover {background-color: #1e404f;}
 
 .mainTable{
@@ -131,7 +138,7 @@ float:right;
 .addBillBtn {
   display: inline-block;
   background-color: #FFFFFF;
-  color: #1c313a;
+  color: #800000  ;
   text-align: center;
 
   font-size: 22px;
@@ -140,12 +147,12 @@ margin-top: 1%;
   transition: all 0.5s;
   cursor: pointer;
  margin-left: 32%;
-  border: 2px solid #1c313a;
+  border: 2px solid #800000;
 }
 
 .addBillBtn:hover{
-    background-color: #1c313a;
-    color:white;
+    background-color: #ffffff;
+    color:#800000;
 }
 
 .addBillBtn span {
