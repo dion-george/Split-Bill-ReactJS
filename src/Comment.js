@@ -40,21 +40,22 @@ export default class Comment extends React.Component {
   } 
 
 
-
-
 remove = () => {
   console.log('Hello Remove');
   this.props.deleteFromBoard(this.props.index);
  }
 
  save = () => {
-    var splitMoney = 0;
+  var money1,money2,money3,money4;
+  var splitMoney = 0;
   var splitPerson = 0;
   if(this.state.isChecked1){
-  var stateCheck = "true"; 
+  var stateCheck = "true";
+
   splitPerson++;
   }else{
     var stateCheck1 = "false";
+    money1 = 0;
   }
 
   if(this.state.isChecked2){
@@ -62,6 +63,7 @@ remove = () => {
   splitPerson++;
   }else{
     var stateCheck2 = "false";
+    money2 = 0;
   }
 
   if(this.state.isChecked3){
@@ -69,6 +71,7 @@ remove = () => {
   splitPerson++;
   }else{
     var stateCheck3 = "false";
+    money3 = 0;
   }
 
   if(this.state.isChecked4){
@@ -76,16 +79,48 @@ remove = () => {
   splitPerson++;
   }else{
     var stateCheck4 = "false";
+    money4 = 0;
   }
-  splitMoney = this.refs.newText2.value / splitPerson;
+
+  splitMoney = this.refs.newText3.value / splitPerson;
+console.log(splitMoney);
+  if (this.state.isChecked1){
+    money1 = splitMoney;
+  }
+  if (this.state.isChecked2){
+    money2 = splitMoney;
+  }
+ if (this.state.isChecked3){
+    money3 = splitMoney;
+  }
+  if (this.state.isChecked4){
+    money4 = splitMoney;
+  }
+
+ if (this.refs.newText2.value == "Me" || this.refs.newText2.value == "me" ) {
+  money1 = 0;
+ }
+
+ if (this.refs.newText2.value == "Welisa" || this.refs.newText2.value == "welisa" ) {
+  money2 = 0;
+ }
+
+ if (this.refs.newText2.value == "Rohan" || this.refs.newText2.value == "rohan" ) {
+  money3 = 0;
+ }
+
+ if (this.refs.newText2.value == "Varun" || this.refs.newText2.value == "varun" ) {
+  money4 = 0;
+ }
+
 
   this.props.updateCommentText(this.refs.newText.value,
     this.refs.newText2.value,
     this.refs.newText3.value,
-    stateCheck1, 
-    stateCheck2,
-    stateCheck3,
-    stateCheck4,
+    money1, 
+    money2,
+    money3,
+    money4,
     splitPerson,
     splitMoney,
     this.props.index);
@@ -109,8 +144,8 @@ remove = () => {
       <div>
         <table className="mainTable">
         <tr>
-        <th>Amount: </th>
-        <th>Paid by:</th>
+        <th>Amount: {this.props.dd.amt}</th>
+        <th>Paid by:{this.props.dd.paidPerson}</th>
     
         </tr>
         </table>
@@ -122,20 +157,20 @@ remove = () => {
     <th>Amount</th>
   </tr>
   <tr>
-    <td>You</td>
-    <td>Rs </td>
+    <td>Me</td>
+    <td>Rs. {this.props.dd.f1} </td>
   </tr>
   <tr>
     <td>Welisa</td>
-    <td>Rs</td>
+    <td>Rs. {this.props.dd.f2}</td>
   </tr>
     <tr>
     <td>Rohan</td>
-    <td>Rs</td>
+    <td>Rs. {this.props.dd.f3}</td>
   </tr>
     <tr>
     <td>Varun</td>
-    <td>Rs</td>
+    <td>Rs. {this.props.dd.f4}</td>
   </tr>
 </table>
       </div>

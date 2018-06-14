@@ -8,11 +8,11 @@ export default class Board extends React.Component {
     [
     {"name":"test1",
             "paidPerson": "Dion",
-            "age":18,
-            "f1":"false",
-            "f2":"false",
-            "f3":"false",
-            "f4":"false",
+            "amt":18,
+            "f1":1,
+            "f2":1,
+            "f3":1,
+            "f4":1,
             "sp":5,
             "sm":5
             }
@@ -37,21 +37,20 @@ add = (text) => {
   delete dataTemp[i];
   }
 
-  updateComment = (newText,newPP,newAge,nf1,nf2,nf3,nf4,nsp,nsm,i)=> {
+  updateComment = (newText,newPP,newAmt,nf1,nf2,nf3,nf4,nsp,nsm,i)=> {
 
 console.log('hiii');
  let dataTemp = this.state.data;
   dataTemp[i].name = newText;
   dataTemp[i].paidPerson = newPP;
-  dataTemp[i].age = newAge;
-  this.setState({data:dataTemp});
-      dataTemp[i].f1 = nf1;
+  dataTemp[i].amt = newAmt;
+  dataTemp[i].f1 = nf1;
   dataTemp[i].f2 = nf2;
   dataTemp[i].f3 = nf3;
   dataTemp[i].f4 = nf4;
   dataTemp[i].sp = nsp;
   dataTemp[i].sm = nsm;    
-
+this.setState({data:dataTemp});
   }
 
 
