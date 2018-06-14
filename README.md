@@ -14,8 +14,8 @@ npm start // For launching.
 
 Step 1: Add information regarding the Bill.
 
-![img1](/Screenshots/ss1.PNG?raw=true "img1")
+![img1](/Screenshots/ss1.png?raw=true "img1")
 
 Step 2: View the Bills stored and get information regarding your account.
 
-![img1](/Screenshots/ss2.PNG?raw=true "img1")
+![img2](/Screenshots/ss2.png?raw=true "img1")
