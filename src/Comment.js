@@ -198,7 +198,7 @@ console.log(splitMoney);
       </div>
         <h3> {this.props.sum} </h3>
         <div>
-        <button onClick={this.remove}> Remove </button>
+        <button onClick={this.remove} className="saveRemove"> Remove </button>
         </div>
       </div>  
        );

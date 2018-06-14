@@ -1,5 +1,6 @@
 import React from 'react';
 import Comment from './Comment';
+import {Container, Row, Col} from 'react-amazing-grid';
 import './index.css';
 export default class Board extends React.Component {
  constructor (props){
@@ -147,11 +148,30 @@ if (nf1 == nsm){
 render() {
     return (
        <div>
-       <button onClick={this.add.bind()} className="addBillBtn"><span>Add Bill</span></button>
-          <h3>To Get: {this.state.toGet}</h3>
-          <h3>To Give: {this.state.toGive}</h3>
-          {this.state.data.map(this.eachComment)}
+       <Container>
+       <Row>
+       <h2>Track your Billings, Sam.</h2>
+       <button onClick={this.add.bind()} className="addBillBtn"><span>Add Bill</span></button>   
+        </Row>
+        
+        <Row>
+      <div className="horizontalLine">
+      </div>
+        </Row>
 
+       <Row>
+        
+
+          <table className="mainTable">
+        <tr>
+        <th>Amount: {this.state.toGet}</th>
+        <th>Paid by:{this.state.toGive}</th>
+    
+        </tr>
+        </table>
+        </Row>
+        </Container>
+        {this.state.data.map(this.eachComment)}
       </div>
     );
   }

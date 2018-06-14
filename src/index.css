@@ -76,7 +76,7 @@ float:right;
 	background-color: #888888; 
 }
 
-.mainTable th:hover {background-color: #383838;}
+.mainTable th:hover {background-color: #1e404f;}
 
 .mainTable{
 	margin-top:8px;
@@ -130,19 +130,22 @@ float:right;
 
 .addBillBtn {
   display: inline-block;
-
-  background-color: #2E8B57;
-  border: none;
-  color: #FFFFFF;
+  background-color: #FFFFFF;
+  color: #1c313a;
   text-align: center;
+
   font-size: 22px;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  width: 120px; 
+margin-top: 1%;
+  width: 20%; 
   transition: all 0.5s;
   cursor: pointer;
-  margin-left: 20%;
+ margin-left: 32%;
+  border: 2px solid #1c313a;
+}
 
+.addBillBtn:hover{
+    background-color: #1c313a;
+    color:white;
 }
 
 .addBillBtn span {
@@ -161,6 +164,7 @@ float:right;
   transition: 0.5s;
 }
 .addBillBtn:hover span {
+
   padding-right: 25px;
 }
 
@@ -183,7 +187,7 @@ width: 100%;
 }
 
 .billStyle:focus {
-    border: 3px solid #2F4F4F ;
+    border: 3px solid #1c313a ;
 }
 
 .paidStyle{
@@ -194,8 +198,11 @@ width: 100%;
     border: 1px solid #1c313a;
     outline: none;    
     font-size: 15px;
-
 }
+.paidStyle:focus {
+    border: 2px solid #1c313a ;
+}
+
 
 .amtStyle{
     width: 60%;
@@ -206,10 +213,10 @@ width: 100%;
     outline: none;
     font-size: 15px;
 }
-
-.saveRemove{
-
+.amtStyle:focus {
+    border: 2px solid #1c313a ;
 }
+
 
 .container {
     display: block;
@@ -281,4 +288,30 @@ width: 100%;
     -webkit-transform: rotate(45deg);
     -ms-transform: rotate(45deg);
     transform: rotate(45deg);
+}
+
+
+.saveRemove {
+    background-color: #4CAF50; 
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    margin-left: 40%;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    cursor: pointer;
+    background-color: white; 
+    color: black; 
+    border: 2px solid #1c313a;
+}
+
+
+.saveRemove:hover {
+    background-color: #1c313a;
+    color: white;
 }
