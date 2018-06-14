@@ -3,6 +3,7 @@ import {Container, Row, Col} from 'react-amazing-grid';
 
 export default class Comment extends React.Component {
 
+
    constructor(props) {
     super(props);
     this.state = { temp: true,
@@ -10,6 +11,8 @@ export default class Comment extends React.Component {
        isChecked2: true,
        isChecked3: true,
        isChecked4: true,
+
+
      };
      }
 
@@ -42,10 +45,18 @@ export default class Comment extends React.Component {
 
 remove = () => {
   console.log('Hello Remove');
-  this.props.deleteFromBoard(this.props.index);
+  this.props.deleteFromBoard(
+    this.props.dd.paidPerson,
+    this.props.dd.amt,
+    this.props.dd.f1,
+    this.props.dd.f2,
+    this.props.dd.f3,
+    this.props.dd.f4,
+    this.props.index);
  }
 
  save = () => {
+  var balance;
   var money1,money2,money3,money4;
   var splitMoney = 0;
   var splitPerson = 0;
@@ -86,6 +97,7 @@ remove = () => {
 console.log(splitMoney);
   if (this.state.isChecked1){
     money1 = splitMoney;
+   // balance = balance - splitMoney;
   }
   if (this.state.isChecked2){
     money2 = splitMoney;
@@ -99,6 +111,10 @@ console.log(splitMoney);
 
  if (this.refs.newText2.value == "Me" || this.refs.newText2.value == "me" ) {
   money1 = 0;
+
+
+  // this.props.balance = this.props.balance + this.refs.newText3.value - splitMoney;  
+
  }
 
  if (this.refs.newText2.value == "Welisa" || this.refs.newText2.value == "welisa" ) {
@@ -113,6 +129,8 @@ console.log(splitMoney);
   money4 = 0;
  }
 
+ // this.props.balance(balance);
+  // this.props.updateBalance(this.props.balance);
 
   this.props.updateCommentText(this.refs.newText.value,
     this.refs.newText2.value,
@@ -178,7 +196,7 @@ console.log(splitMoney);
 
         <div className="horizontalLine">
       </div>
-
+        <h3> {this.props.sum} </h3>
         <div>
         <button onClick={this.remove}> Remove </button>
         </div>
@@ -253,7 +271,7 @@ console.log(splitMoney);
         </Row>
           </Container>
 
-    <button onClick={this.save}> Save </button>
+    <button onClick={this.save} className="saveRemove"> Save </button>
         </div>
       );
   }

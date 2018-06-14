@@ -1,6 +1,5 @@
 import React from 'react';
-import Modal from 'react-responsive-modal';
-import './custom-animation.css';
+
 import './index.css';
 
 import {Container, Row, Col} from 'react-amazing-grid';
@@ -38,24 +37,10 @@ export default class Centered extends React.Component {
 
     const { open } = this.state;
     return (
-      <div className="example">
+      <div>
         <button className="addBillBtn" onClick={this.onOpenModal}>
           <span>Add Bill</span>
         </button>
-        
-        <Modal
-          open={open}
-          onClose={this.onCloseModal}
-          center
-          classNames={{ overlay: 'custom-overlay', modal: 'custom-modal' }}
-        >
-<div>
-<Form onChange={fields => this.onChange(fields)} />
-
-</div>
-
-        </Modal>
-
       </div>
     );
   }

@@ -130,7 +130,7 @@ float:right;
 
 .addBillBtn {
   display: inline-block;
-  border-radius: 4px;
+
   background-color: #2E8B57;
   border: none;
   color: #FFFFFF;
@@ -142,6 +142,7 @@ float:right;
   transition: all 0.5s;
   cursor: pointer;
   margin-left: 20%;
+
 }
 
 .addBillBtn span {
@@ -181,4 +182,8 @@ float:right;
 .amtStyle{
   height:80%;
   width: 20%;
+}
+
+.saveRemove{
+  
 }

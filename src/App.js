@@ -2,12 +2,14 @@ import React, { Component } from 'react';
 import { AwesomeButton } from 'react-awesome-button';
 import {Container, Row, Col} from 'react-amazing-grid';
 import Centered from './Centered';
-
+import Userbalance from './Userbalance';
 import Board from './Board';
 import MessageList from './message-list';
 
 
 class App extends Component {
+
+
     render() {
     return (
       <div className = "mainBody">
@@ -28,17 +30,15 @@ class App extends Component {
         </Col>
         <Col xs={7} xsoffset={1}>
           <div className="ListDiv">
-              <h3> Testing </h3>
 
               <Board />
           </div>
         </Col>
         <Col xs={3} xsoffset={4}>
         <div className = "members">
-          <Centered />
           <div className="name"> 
           <h2> Dion George </h2>
-          <h3> Balance: Rs. 30 </h3>
+            
           </div>
   <table className="membersSidebar">
   <tr>
