@@ -1,4 +1,5 @@
 import React from 'react';
+import {Container, Row, Col} from 'react-amazing-grid';
 
 export default class Comment extends React.Component {
 
@@ -80,6 +81,7 @@ remove = () => {
 
   this.props.updateCommentText(this.refs.newText.value,
     this.refs.newText2.value,
+    this.refs.newText3.value,
     stateCheck1, 
     stateCheck2,
     stateCheck3,
@@ -88,7 +90,7 @@ remove = () => {
     splitMoney,
     this.props.index);
   console.log(splitMoney); 
-  
+    console.log(this.refs.newText2.value); 
     this.setState({temp:false});
  
  }
@@ -152,10 +154,32 @@ remove = () => {
   renderForm(){
     return(
         <div>
-          <input ref="newText"></input>
-          <input ref="newText2"></input>
-          <button onClick={this.save}> Save </button>
         
+
+        <Container>
+        <Row>
+        <Col xs={3} xsoffset={1}>
+        </Col>
+        <Col>
+        <span>Bill Name: </span>
+          <input ref="newText" placeholder={'Enter Bill Name'} className="billStyle"></input>
+        </Col>
+        </Row>
+        <Row>
+         <Col xs={2} xsoffset={1}>
+        </Col>
+         <Col>
+         <span>Paid by: </span>
+          <input ref="newText2" placeholder={'Person paid'} className="paidStyle"></input>
+        </Col>
+         
+        <Col>
+          <span>Amount:</span>
+          <input ref="newText3" placeholder={'In Rs.'} className="amtStyle"></input>
+          </Col>
+          </Row>
+          <Row>
+        <span>Split the bill with: </span>
         <label>
         
         <input type="checkbox"
@@ -191,7 +215,10 @@ remove = () => {
         />
         Varun
        </label>
-  
+        </Row>
+          </Container>
+
+    <button onClick={this.save}> Save </button>
         </div>
       );
   }

@@ -168,3 +168,17 @@ float:right;
   right: 0;
 }
 
+.billStyle{
+  height:80%;
+  width: 30%;
+}
+
+.paidStyle{
+ height:80%;
+  width: 40%; 
+}
+
+.amtStyle{
+  height:80%;
+  width: 20%;
+}

@@ -15,10 +15,10 @@ class App extends Component {
   
 <ul>
   <li className="navli"><a href="#home">Home</a></li>
-  <li className="navli"><a href="#news">News</a></li>
+  <li className="navli"><a href="#Contribute">Contribute</a></li>
   <li  className="navli" ><a href="#contact">Contact</a></li>
-  <li className="rightNav"><a href="#about">About</a></li>
-  <li className="rightNav"><a href="#Next">Next</a></li>
+  <li className="rightNav"><a href="#about">Subscribe</a></li>
+  <li className="rightNav"><a href="#Next">About</a></li>
 </ul>
 
 </div>

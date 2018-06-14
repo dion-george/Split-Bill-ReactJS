@@ -7,6 +7,7 @@ export default class Board extends React.Component {
     data: 
     [
     {"name":"test1",
+            "paidPerson": "Dion",
             "age":18,
             "f1":"false",
             "f2":"false",
@@ -36,11 +37,12 @@ add = (text) => {
   delete dataTemp[i];
   }
 
-  updateComment = (newText,newAge,nf1,nf2,nf3,nf4,nsp,nsm,i)=> {
+  updateComment = (newText,newPP,newAge,nf1,nf2,nf3,nf4,nsp,nsm,i)=> {
 
 console.log('hiii');
  let dataTemp = this.state.data;
   dataTemp[i].name = newText;
+  dataTemp[i].paidPerson = newPP;
   dataTemp[i].age = newAge;
   this.setState({data:dataTemp});
       dataTemp[i].f1 = nf1;
